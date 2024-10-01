@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #c6c2c2a3;
+}
+
+header nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header nav h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+header nav .search-div {
+  display: flex;
+  justify-content: center;
+}
+
+.search-div input[type="text"] {
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+.search-div input[type="text"],
+button[type="submit"] {
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-div button[type="submit"] {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.search-div button[type="submit"]:hover {
+  background-color: rgb(59, 59, 59);
+  color: white;
+}
+
+/* Responsive Design for Tablets and Mobiles */
+@media screen and (max-width: 1024px) {
+  header nav {
+    padding: 15px;
+  }
+
+  header nav h1 {
+    font-size: 22px;
+  }
+
+  .search-div input[type="text"] {
+    font-size: 16px;
+  }
+
+  .search-div button[type="submit"] {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav .search-div {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .search-div input[type="text"],
+  .search-div button[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header nav h1 {
+    font-size: 20px;
+  }
+
+  .search-div input[type="text"],
+  .search-div button[type="submit"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .recipe-div {
+    /* align-items: center; */
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
+
+/* Recipe Container and Cards */
+.recipe-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.recipe-div {
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  /* height: 500px; */
+  padding-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.img {
+  height: 300px;
+}
+.viewRecipe-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: black;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.viewRecipe-btn:hover {
+  background-color: rgb(59, 59, 59);
+  color: white;
+}
+.recipeView-popup {
+  height: 60%;
+  width: 40%;
+  background-color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  overflow-y: scroll;
+  border-radius: 6px;
+}
+/* Adding scrollbar to recipeView-popup */
+.recipeView-popup::-webkit-scrollbar {
+  width: 10px;
+}
+.recipeView-popup::-webkit-scrollbar-thumb {
+  background-color: #b5b5ba;
+  border-radius: 16px;
+  /* --webkit-border-radius: 16px; */
+}
+.close-btn button {
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.viewRecipe-container {
+  color: #fff;
+  padding: 30px;
+}
+.recipeName {
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.recipeIngredients-heading,
+.recipeInstructions-heading,
+.recipeInstructions {
+  margin-bottom: 10px;
+}
+.recipeIngredients {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.recipeInstructions,
+.recipeIngredients {
+  line-height: 30px;
+}
+.recipeInstructions {
+  white-space: pre-line;
+}
+@media screen and (max-width: 480px) {
+  .recipeView-popup {
+    width: 95%;
+    height: 70%;
+    padding: 10px;
+  }
+}

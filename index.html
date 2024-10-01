@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Recipe App</h1>
+        <div class="search-div">
+          <input type="text" placeholder="Search" class="searchBox" />
+          <button type="submit" class="searchBtn">Search</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="recipe-container">
+          <h2 id="message">Search for recipes</h2>
+          <div class="recipe-div">
+            <!-- <div class="card">
+                <img src="${meal.strMealThumb}" alt="">
+                <h3>${meal.strMeal}</h3>
+                <p>${meal.strArea}</p>
+                <p>${meal.strCategory}</p>
+                <div>
+                    <button class="viewRecipe-btn">View Recipe</button>
+                </div>
+                </div> -->
+          </div>
+        </div>
+        <div class="recipeView-popup">
+          <div class="close-btn">
+            <button>&#x274C;</button>
+          </div>
+          <div class="viewRecipe-container"></div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
